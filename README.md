@@ -15,7 +15,7 @@ In game, open the **Modded** tab and search for **Lebanon**, or press **F1** and
 - Free kits with `/kit` (starter kit every 20 minutes)
 - Teleport: `/sethome`, `/home`, `/tpr` (accept with `/tpa`), `/outpost`, `/bandit`
 - `/backpack`, `/remove`, `/grade hqm` auto-upgrade, furnace splitter, quick sort
-- No NPCs or animals, so it's pure PvP
+- 3500 map with scientists, heavy scientists, animals and the Bradley tank at Launch Site
 - A storm rolls in every hour
 - Monument lights stay on and puzzles need no fuses
 - Active admin
@@ -50,7 +50,8 @@ These are the gameplay plugins written for this server (Oxide / uMod, C#). They 
 | [AutoGrade](plugins/AutoGrade.cs) | `/grade wood\|stone\|metal\|hqm\|off`: new building blocks are placed at that grade, paid from the player's inventory |
 | [MonumentPower](plugins/MonumentPower.cs) | Keeps monument lights on and fuse boxes filled |
 | [HourlyStorm](plugins/HourlyStorm.cs) | Starts a storm every hour and clears it after 10 minutes |
-| [NoNPC](plugins/NoNPC.cs) | Removes hostile NPCs and wild animals; keeps safe-zone guards, shopkeepers, turrets and horses |
+| [NoNPC](plugins/NoNPC.cs) | Removes hostile NPCs and wild animals; keeps safe-zone guards, shopkeepers, turrets and horses (not active on the server right now) |
+| [MapCheck](plugins/MapCheck.cs) | Records which monuments the map has, so the wipe script can re-roll maps without a Launch Site |
 | [TunnelDwellerCap](plugins/TunnelDwellerCap.cs) | Caps tunnel dweller NPCs to save server CPU |
 | [MemoryRestart](plugins/MemoryRestart.cs) | Daily restart, and a restart when memory use gets too high, with a chat countdown |
 | [Welcome](plugins/Welcome.cs) | Welcome popup and chat message on join, kit reminders, online count. Set `OwnerId` to your SteamID64 to skip the popup for yourself |

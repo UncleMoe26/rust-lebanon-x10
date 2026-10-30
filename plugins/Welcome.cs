@@ -20,7 +20,7 @@ namespace Oxide.Plugins
         const string PopupText =
             "<color=#e0b030>SERVER</color>\n" +
             "x10 gather  •  fast craft (3s max)  •  fast smelt and recycle  •  boosted loot  •  stacks x20\n" +
-            "No NPCs or animals, pure PvP  •  storm every hour\n" +
+            "Scientists, heavy scientists, animals and the Bradley tank at Launch Site  •  storm every hour\n" +
             "<color=#ffcc00>Weekly wipe: every Thursday 21:00 Lebanon time</color>\n\n" +
             "<color=#e0b030>COMMANDS</color>\n" +
             "<color=#9fd0ff>/kit</color>  free kits (starter kit every 20 minutes)\n" +
