@@ -66,5 +66,6 @@ These are the gameplay plugins written for this server (Oxide / uMod, C#). They 
 | [InviteRewards](plugins/InviteRewards.cs) | `/invite` codes: a new player who enters a friend's code and plays 30 minutes earns a reward for both. Veterans can't use codes, and each player can earn from up to 20 friends |
 | [WipeEvent](plugins/WipeEvent.cs) | Changes the server name to `WIPE TONIGHT` / `JUST WIPED` around the wipe, and gives `/wipekit` once per player in the first 2 hours |
 | [VoteRewards](plugins/VoteRewards.cs) | `/vote` and `/claimvote` for [rust-servers.net](https://rust-servers.net) votes. Put your server key and vote link in `oxide/config/VoteRewards.json` |
+| [DiscordAnnounce](plugins/DiscordAnnounce.cs) | Posts "wipe tonight", "wipe in 2 hours / 15 minutes", "just wiped" and player-count milestones to a Discord channel. Put a webhook URL in `oxide/config/DiscordAnnounce.json` |
 
 The server also runs these uMod plugins by other authors (not included here): Kits, Gather Manager, NTeleportation, Remover Tool, Backpacks, Furnace Splitter, Quick Sort.
