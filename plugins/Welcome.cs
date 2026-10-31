@@ -5,14 +5,14 @@ using UnityEngine;
 
 namespace Oxide.Plugins
 {
-    [Info("Welcome", "Uncle Moe", "1.4.0")]
+    [Info("Welcome", "Uncle Moe", "1.5.0")]
     [Description("Greets players, shows a welcome popup, reminds about kits and posts the online count")]
     class Welcome : RustPlugin
     {
         const string Message =
             "<color=#e0b030>Welcome to Rust Lebanon x10!</color> x10 gather, fast craft, fast smelt, boosted loot. <color=#ffcc00>Wipe every Thursday 21:00 Lebanon time.</color>\n" +
             "<color=#9fd0ff>/kit</color> starter kit  <color=#9fd0ff>/sethome</color> <color=#9fd0ff>/home</color> <color=#9fd0ff>/tpr</color> teleport  <color=#9fd0ff>/backpack</color>  <color=#9fd0ff>/remove</color>  <color=#9fd0ff>/grade hqm</color>\n" +
-            "Storm every hour. Have fun and invite your friends!";
+            "Storm every hour. Bring your friends with <color=#9fd0ff>/invite</color> and you both get free loot!";
 
         const string KitReminder =
             "<color=#ffcc00>FREE KITS!</color> Type <color=#9fd0ff>/kit</color> to open the kit menu. The starter kit can be claimed every 20 minutes.";
@@ -28,9 +28,11 @@ namespace Oxide.Plugins
             "<color=#9fd0ff>/tpr player</color>  teleport to a friend (they accept with <color=#9fd0ff>/tpa</color>)\n" +
             "<color=#9fd0ff>/outpost</color>  <color=#9fd0ff>/bandit</color>  teleport to the safe zones\n" +
             "<color=#9fd0ff>/backpack</color>  extra storage    <color=#9fd0ff>/remove</color>  remove your own building parts\n" +
-            "<color=#9fd0ff>/grade hqm</color>  auto upgrade while you build\n\n" +
+            "<color=#9fd0ff>/grade hqm</color>  auto upgrade while you build\n" +
+            "<color=#9fd0ff>/invite</color>  your invite code: when a friend plays 30 min you BOTH get free loot\n" +
+            "<color=#9fd0ff>/wipekit</color>  free starter pack in the first 2 hours after every wipe\n\n" +
             "<color=#e0b030>RULES</color>\n" +
-            "No cheating, no exploiting, no racism. Have fun and invite your friends!";
+            "No cheating, no exploiting, no racism. Have fun!";
 
         // Seconds between online count announcements
         const float OnlineInterval = 600f;
@@ -53,6 +55,8 @@ namespace Oxide.Plugins
             foreach (var p in BasePlayer.allPlayerList)
                 if (p != null && !p.IsNpc && p.userID.IsSteamId()) seen.Add(p.userID);
             SaveSeen();
+            // Serialize the popup once at boot: the first CUI serialization is slow (~300 ms) and would freeze the first join
+            CuiHelper.ToJson(BuildPopup("warmup"));
             timer.Every(OnlineInterval, AnnounceOnline);
             timer.Once(KitInterval / 2f, () =>
             {
@@ -102,7 +106,15 @@ namespace Oxide.Plugins
         void ShowPopup(BasePlayer player)
         {
             CuiHelper.DestroyUi(player, PopupName);
-            string name = player.displayName.Replace("<", "").Replace(">", "");
+            CuiHelper.AddUi(player, BuildPopup(player.displayName.Replace("<", "").Replace(">", "")));
+            timer.Once(PopupSeconds, () =>
+            {
+                if (player != null && player.IsConnected) CuiHelper.DestroyUi(player, PopupName);
+            });
+        }
+
+        CuiElementContainer BuildPopup(string name)
+        {
             var c = new CuiElementContainer();
             c.Add(new CuiPanel
             {
@@ -136,11 +148,7 @@ namespace Oxide.Plugins
                 RectTransform = { AnchorMin = "0.38 0.04", AnchorMax = "0.62 0.11" },
                 Text = { Text = "LET'S PLAY", FontSize = 18, Font = "robotocondensed-bold.ttf", Align = TextAnchor.MiddleCenter, Color = "1 1 1 1" }
             }, PopupName);
-            CuiHelper.AddUi(player, c);
-            timer.Once(PopupSeconds, () =>
-            {
-                if (player != null && player.IsConnected) CuiHelper.DestroyUi(player, PopupName);
-            });
+            return c;
         }
 
         [ConsoleCommand("welcome.close")]

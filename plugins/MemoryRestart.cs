@@ -2,12 +2,12 @@ using System.Diagnostics;
 
 namespace Oxide.Plugins
 {
-    [Info("MemoryRestart", "Uncle Moe", "1.1.0")]
+    [Info("MemoryRestart", "Uncle Moe", "1.1.1")]
     [Description("Restarts the server with a chat countdown daily and when memory use gets too high")]
     class MemoryRestart : RustPlugin
     {
-        // RustDedicated memory (MB) that triggers a restart; VPS has 12 GB
-        const long LimitMb = 10500;
+        // RustDedicated memory (MB) that triggers a restart; the dedicated box has 125 GB, a healthy 100-player server stays well under this
+        const long LimitMb = 24000;
         // Countdown before quitting; systemd starts the server again
         const int CountdownSeconds = 600;
 

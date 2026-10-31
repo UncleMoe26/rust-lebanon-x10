@@ -8,6 +8,12 @@ client.connect 2.59.169.7:28015
 
 In game, open the **Modded** tab and search for **Lebanon**, or press **F1** and paste the line above.
 
+## Free loot
+
+- **`/wipekit`**: a free starter pack (tools, 10k wood and stone, metal, a furnace and a revolver) in the first 2 hours after every wipe
+- **`/invite`**: get your invite code and give it to a friend. When they type `/invited CODE` and play 30 minutes, **you both** get rewarded: 500 scrap, a semi-auto rifle, ammo and syringes for you, a starter pack for them. `/invite top` shows the best recruiters
+- **`/kit`**: free kits all wipe long
+
 ## What's on the server
 
 - x10 gather, crafting capped at 3 seconds, fast smelting and recycling
@@ -28,7 +34,7 @@ In game, open the **Modded** tab and search for **Lebanon**, or press **F1** and
 | Blueprints | Kept between map wipes |
 | Facepunch forced wipe | First Thursday of the month (same time) |
 
-The server name always shows the last wipe date, for example `Wiped 30/10`.
+The server name shows the last wipe date, for example `Wiped 30/10`. On Thursdays before the wipe it reads `WIPE TONIGHT 21:00 LB`, and for 24 hours after a wipe `JUST WIPED`.
 
 ## Rules
 
@@ -55,5 +61,8 @@ These are the gameplay plugins written for this server (Oxide / uMod, C#). They 
 | [TunnelDwellerCap](plugins/TunnelDwellerCap.cs) | Caps tunnel dweller NPCs to save server CPU |
 | [MemoryRestart](plugins/MemoryRestart.cs) | Daily restart, and a restart when memory use gets too high, with a chat countdown |
 | [Welcome](plugins/Welcome.cs) | Welcome popup and chat message on join, kit reminders, online count. Set `OwnerId` to your SteamID64 to skip the popup for yourself |
+| [InviteRewards](plugins/InviteRewards.cs) | `/invite` codes: a new player who enters a friend's code and plays 30 minutes earns a reward for both. Veterans can't use codes, and each player can earn from up to 20 friends |
+| [WipeEvent](plugins/WipeEvent.cs) | Changes the server name to `WIPE TONIGHT` / `JUST WIPED` around the wipe, and gives `/wipekit` once per player in the first 2 hours |
+| [VoteRewards](plugins/VoteRewards.cs) | `/vote` and `/claimvote` for [rust-servers.net](https://rust-servers.net) votes. Put your server key and vote link in `oxide/config/VoteRewards.json` |
 
 The server also runs these uMod plugins by other authors (not included here): Kits, Gather Manager, NTeleportation, Remover Tool, Backpacks, Furnace Splitter, Quick Sort.
