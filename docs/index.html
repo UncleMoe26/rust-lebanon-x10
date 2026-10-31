@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rust Lebanon x10 | EU modded Rust server, weekly wipe Thursday</title>
+<meta name="description" content="Rust Lebanon x10: EU modded Rust server with a fresh map every Thursday 20:00 CET / 21:00 Lebanon. Free wipe kit, invite rewards, kits, teleport, fast craft, 100 slots.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://unclemoe26.github.io/rust-lebanon-x10/">
+<meta property="og:title" content="Rust Lebanon x10 | Weekly wipe every Thursday">
+<meta property="og:description" content="x10 gather, free wipe kit, invite rewards, kits, teleport, fast craft. EU, 100 slots. client.connect 2.59.169.7:28015">
+<meta property="og:image" content="https://unclemoe26.github.io/rust-lebanon-x10/header.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+/* Same look as the server logo: charcoal, the orange LEBANON gradient, the blue lightning bolt */
+:root {
+  --bg: #121418; --panel: #1b1e24; --panel2: #22262e; --line: #2f343d;
+  --ink: #eceef1; --muted: #a2a8b3;
+  --orange: #ec7a2e; --orange2: #d24e1d; --blue: #6db8ff;
+  --display: "Oswald", "Arial Narrow", sans-serif; --body: "Inter", "Segoe UI", system-ui, sans-serif; --mono: "JetBrains Mono", Consolas, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--bg); color: var(--ink); font: 400 16px/1.6 var(--body); }
+a { color: var(--blue); }
+main { max-width: 1040px; margin: 0 auto; padding: 0 20px 64px; display: grid; gap: 56px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 700; text-transform: uppercase; letter-spacing: .02em; margin: 0; text-wrap: balance; }
+h2 { font-size: 30px; display: flex; align-items: center; gap: 12px; }
+h2::before { content: ""; width: 6px; height: 26px; border-radius: 2px; background: linear-gradient(var(--orange), var(--orange2)); }
+p { margin: 0; }
+section { display: grid; gap: 20px; }
+
+.hero { position: relative; overflow: hidden; background: radial-gradient(ellipse at 50% 120%, #4a1c10 0%, transparent 60%), linear-gradient(#16191f, var(--bg)); border-bottom: 1px solid var(--line); }
+.hero-in { max-width: 1040px; margin: 0 auto; padding: 56px 20px 48px; display: grid; grid-template-columns: 200px 1fr; gap: 36px; align-items: center; }
+.hero img { width: 200px; height: 200px; border-radius: 22px; box-shadow: 0 10px 40px rgba(0,0,0,.5); }
+.hero h1 { font-size: clamp(40px, 7vw, 72px); line-height: .95; }
+.hero h1 span { background: linear-gradient(var(--orange), var(--orange2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.tagline { color: var(--muted); font-size: 18px; margin-top: 12px; max-width: 56ch; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.btn { display: inline-flex; align-items: center; gap: 10px; font: 700 17px/1 var(--display); letter-spacing: .06em; text-transform: uppercase; text-decoration: none; border-radius: 6px; padding: 15px 22px; border: 0; cursor: pointer; }
+.btn.primary { background: linear-gradient(var(--orange), var(--orange2)); color: #fff; box-shadow: 0 6px 20px rgba(236,122,46,.25); }
+.btn.ghost { background: var(--panel2); color: var(--ink); border: 1px solid var(--line); }
+.btn:hover { filter: brightness(1.08); }
+.btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+.connect { font-family: var(--mono); font-size: 14px; color: var(--muted); margin-top: 14px; }
+.connect code { color: var(--ink); background: var(--panel2); padding: 3px 8px; border-radius: 4px; border: 1px solid var(--line); }
+@media (max-width: 720px) { .hero-in { grid-template-columns: 1fr; text-align: center; } .hero img { width: 140px; height: 140px; margin: 0 auto; } .actions { justify-content: center; } .tagline { margin-inline: auto; } }
+
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; margin-top: -28px; position: relative; }
+.fact { background: var(--panel); padding: 16px 18px; display: grid; gap: 4px; }
+.fact b { font: 600 12px var(--display); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.fact span { font: 700 22px var(--display); letter-spacing: .02em; font-variant-numeric: tabular-nums; }
+.fact small { color: var(--muted); font-size: 13px; }
+.fact.wipe span { color: var(--orange); }
+
+.loot { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 20px; display: grid; gap: 8px; align-content: start; }
+.card code { font: 700 20px var(--mono); color: var(--orange); }
+.card p { color: var(--muted); }
+.card.hot { border-color: #6a3417; background: linear-gradient(180deg, #2a1d17, var(--panel) 70%); }
+
+.feats { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 10px 28px; padding: 0; margin: 0; list-style: none; }
+.feats li { padding-left: 26px; position: relative; }
+.feats li::before { content: ""; position: absolute; left: 0; top: 7px; width: 10px; height: 10px; transform: rotate(45deg); background: var(--blue); border-radius: 2px; }
+
+ol.join { margin: 0; padding: 0; list-style: none; counter-reset: s; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+ol.join li { counter-increment: s; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 18px; display: grid; gap: 6px; }
+ol.join li::before { content: counter(s); font: 700 34px/1 var(--display); color: var(--orange); }
+ol.join code { font-family: var(--mono); font-size: 14px; color: var(--ink); background: var(--panel2); padding: 2px 6px; border-radius: 4px; }
+
+.table { border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+table { width: 100%; border-collapse: collapse; }
+td { padding: 11px 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+td:first-child { font-family: var(--mono); color: var(--orange); white-space: nowrap; width: 1%; }
+tr:nth-child(even) td { background: #171a20; }
+
+.rules { margin: 0; padding-left: 22px; display: grid; gap: 6px; }
+footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+footer div { max-width: 1040px; margin: 0 auto; padding: 24px 20px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+.toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); background: var(--panel2); border: 1px solid var(--line); padding: 10px 16px; border-radius: 6px; opacity: 0; transition: opacity .2s; pointer-events: none; }
+.toast.on { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-in">
+    <img src="logo.png" alt="Rust Lebanon logo" width="200" height="200">
+    <div>
+      <h1>Rust <span>Lebanon</span> x10</h1>
+      <p class="tagline">EU modded Rust server with a fresh map every Thursday. x10 gather, free kits, teleport, fast craft, and free loot when you join on wipe day.</p>
+      <div class="actions">
+        <a class="btn primary" href="steam://connect/2.59.169.7:28015">&#9889; Join the server</a>
+        <button class="btn ghost" type="button" id="copy">Copy connect command</button>
+      </div>
+      <p class="connect">or press F1 in Rust and paste <code>client.connect 2.59.169.7:28015</code></p>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <div class="facts" aria-label="Server facts">
+    <div class="fact wipe"><b id="wipe-label">Next wipe</b><span id="countdown">Thursday</span><small id="wipe-when">20:00 CET / 21:00 Lebanon</small></div>
+    <div class="fact"><b>Map</b><span>3500</span><small>Launch Site + Bradley every wipe</small></div>
+    <div class="fact"><b>Slots</b><span>100</span><small>EU, Modded tab</small></div>
+    <div class="fact"><b>Server</b><span>Netherlands</span><small>about 63 ms from Lebanon</small></div>
+  </div>
+
+  <section>
+    <h2>Free loot</h2>
+    <div class="loot">
+      <div class="card hot"><code>/wipekit</code><h3>Wipe day starter pack</h3><p>Tools, 10k wood and stone, metal, a furnace and a revolver. Free once per player in the first 2 hours after every wipe.</p></div>
+      <div class="card hot"><code>/invite</code><h3>Bring a friend, both get paid</h3><p>Give your code to a friend. They type <b>/invited CODE</b>, and once they've played 30 minutes you get 500 scrap, a semi-auto rifle, ammo and syringes, and they get a starter pack.</p></div>
+      <div class="card"><code>/kit</code><h3>Free kits all wipe</h3><p>The starter kit can be claimed every 20 minutes, so a death never sets you back far.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What's on the server</h2>
+    <ul class="feats">
+      <li>x10 gather on every node, tree and pickup</li>
+      <li>Crafting capped at 3 seconds, fast smelting and recycling</li>
+      <li>Boosted loot with 3x scrap, stacks x20</li>
+      <li>Teleport home, to friends, to Outpost and Bandit Camp</li>
+      <li>Backpacks, remover tool, auto-grade, furnace splitter, quick sort</li>
+      <li>3500 map with scientists, heavy scientists and animals</li>
+      <li>The Bradley tank at Launch Site, every wipe</li>
+      <li>A storm rolls in every hour</li>
+      <li>Monument lights stay on, puzzles need no fuses</li>
+      <li>Dedicated 48-thread machine, smooth high server FPS</li>
+      <li>Blueprints kept between map wipes</li>
+      <li>Active admin, no cheaters, no racism</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How to join</h2>
+    <ol class="join">
+      <li><h3>One click</h3><p>Press <b>Join the server</b> at the top of this page. Steam starts Rust and connects you.</p></li>
+      <li><h3>Server browser</h3><p>Open Rust, press <b>Play Game</b>, go to the <b>Modded</b> tab and search <b>Lebanon</b>.</p></li>
+      <li><h3>Console</h3><p>In Rust press <b>F1</b> and paste <code>client.connect 2.59.169.7:28015</code>, then press Enter.</p></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Commands</h2>
+    <div class="table"><table>
+      <tr><td>/kit</td><td>Open the kit menu. Starter kit every 20 minutes</td></tr>
+      <tr><td>/wipekit</td><td>Free starter pack in the first 2 hours of a wipe</td></tr>
+      <tr><td>/invite</td><td>Your invite code. <b>/invite top</b> shows the best recruiters</td></tr>
+      <tr><td>/invited CODE</td><td>New here? Enter the code of the friend who invited you</td></tr>
+      <tr><td>/sethome name</td><td>Save a home (3 homes), then <b>/home name</b> to teleport there</td></tr>
+      <tr><td>/tpr player</td><td>Ask to teleport to a friend. They accept with <b>/tpa</b></td></tr>
+      <tr><td>/outpost, /bandit</td><td>Teleport to the safe zones</td></tr>
+      <tr><td>/backpack</td><td>Extra storage that travels with you</td></tr>
+      <tr><td>/remove</td><td>Remove your own building parts</td></tr>
+      <tr><td>/grade hqm</td><td>New building parts are placed at that grade (wood, stone, metal, hqm, off)</td></tr>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Wipe schedule</h2>
+    <div class="table"><table>
+      <tr><td>Map wipe</td><td>Every Thursday, 20:00 CET / 21:00 Lebanon time</td></tr>
+      <tr><td>Blueprints</td><td>Kept between map wipes</td></tr>
+      <tr><td>Forced wipe</td><td>Facepunch's monthly update, first Thursday of the month, same time</td></tr>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Rules</h2>
+    <ol class="rules">
+      <li>No cheating, scripting or exploiting.</li>
+      <li>No racism, hate speech or harassment.</li>
+      <li>Respect the admin's decisions. Report problems in game.</li>
+    </ol>
+  </section>
+
+</main>
+
+<footer><div>
+  <span>Rust Lebanon x10 · <code>client.connect 2.59.169.7:28015</code></span>
+  <span>The server's plugins are open source on <a href="https://github.com/UncleMoe26/rust-lebanon-x10">GitHub</a></span>
+</div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+// Copy the connect command
+var toast = document.getElementById('toast');
+function say(text) { toast.textContent = text; toast.classList.add('on'); setTimeout(function () { toast.classList.remove('on'); }, 1800); }
+document.getElementById('copy').addEventListener('click', function () {
+  var cmd = 'client.connect 2.59.169.7:28015';
+  if (navigator.clipboard) navigator.clipboard.writeText(cmd).then(function () { say('Copied. Press F1 in Rust and paste it.'); }, function () { say(cmd); });
+  else say(cmd);
+});
+
+// Wipe countdown: every Thursday 20:00 Amsterdam time (21:00 Lebanon)
+var zone = 'Europe/Amsterdam';
+function partsIn(date) {
+  var p = {};
+  new Intl.DateTimeFormat('en-US', { timeZone: zone, hourCycle: 'h23', year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' })
+    .formatToParts(date).forEach(function (x) { p[x.type] = +x.value; });
+  return p;
+}
+// The instant when the Amsterdam clock reads y-m-d 20:00
+function amsterdam20(y, m, d) {
+  var guess = Date.UTC(y, m - 1, d, 20);
+  for (var i = 0; i < 2; i++) {
+    var p = partsIn(new Date(guess));
+    var shown = Date.UTC(p.year, p.month - 1, p.day, p.hour, p.minute, p.second);
+    guess += Date.UTC(y, m - 1, d, 20) - shown;
+  }
+  return guess;
+}
+function wipes(now) {
+  var t = partsIn(new Date(now)), last = null, next = null;
+  for (var k = -7; k <= 8; k++) {
+    var day = new Date(Date.UTC(t.year, t.month - 1, t.day + k));
+    if (day.getUTCDay() !== 4) continue;
+    var at = amsterdam20(day.getUTCFullYear(), day.getUTCMonth() + 1, day.getUTCDate());
+    if (at <= now) last = at; else if (next === null) next = at;
+  }
+  return { last: last, next: next };
+}
+function tick() {
+  var now = Date.now(), w = wipes(now);
+  var label = document.getElementById('wipe-label'), out = document.getElementById('countdown'), when = document.getElementById('wipe-when');
+  var sinceMin = w.last ? (now - w.last) / 60000 : 1e9;
+  if (sinceMin < 120) {
+    label.textContent = 'Just wiped';
+    out.textContent = Math.ceil(120 - sinceMin) + ' min of /wipekit left';
+  } else if (sinceMin < 1440) {
+    label.textContent = 'Just wiped';
+    out.textContent = 'Fresh map now';
+  } else {
+    var s = Math.max(0, Math.floor((w.next - now) / 1000));
+    var d = Math.floor(s / 86400), h = Math.floor(s % 86400 / 3600), m = Math.floor(s % 3600 / 60);
+    label.textContent = 'Next wipe in';
+    out.textContent = (d ? d + 'd ' : '') + h + 'h ' + m + 'm';
+  }
+  var local = new Date(w.next).toLocaleString([], { weekday: 'short', hour: '2-digit', minute: '2-digit' });
+  when.textContent = 'Thursday 20:00 CET / 21:00 Lebanon (' + local + ' your time)';
+}
+tick();
+setInterval(tick, 30000);
+</script>
+</body>
+</html>
