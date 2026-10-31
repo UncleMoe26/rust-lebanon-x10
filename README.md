@@ -8,6 +8,8 @@ client.connect 2.59.169.7:28015
 
 In game, open the **Modded** tab and search for **Lebanon**, or press **F1** and paste the line above.
 
+**Website:** [unclemoe26.github.io/rust-lebanon-x10](https://unclemoe26.github.io/rust-lebanon-x10/), with a one-click Join button and a countdown to the next wipe.
+
 ## Free loot
 
 - **`/wipekit`**: a free starter pack (tools, 10k wood and stone, metal, a furnace and a revolver) in the first 2 hours after every wipe
