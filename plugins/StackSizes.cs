@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace Oxide.Plugins
 {
-    [Info("Stack Sizes", "Uncle Moe", "1.0.0")]
+    [Info("Stack Sizes", "Uncle Moe", "1.0.1")]
     [Description("Resources stack to 5000, weapons to 1, everything else that stacks x20")]
     public class StackSizes : RustPlugin
     {
@@ -18,7 +18,9 @@ namespace Oxide.Plugins
                 int newStack;
                 if (definition.category == ItemCategory.Resources)
                 {
-                    newStack = ResourceStack;
+                    // Never shrink a stack: water and other liquids stack far above 5000 in vanilla,
+                    // and tanks and catchers can only fill up to the stack size
+                    newStack = System.Math.Max(ResourceStack, definition.stackable);
                     resources++;
                 }
                 else if (definition.category == ItemCategory.Weapon)
@@ -37,6 +39,8 @@ namespace Oxide.Plugins
                 definition.stackable = newStack;
             }
             Puts($"Stack sizes set: {resources} resources -> {ResourceStack}, {weapons} weapons -> 1, {others} other items x{OtherMultiplier}");
+            ItemDefinition water = ItemManager.FindItemDefinition("water");
+            if (water != null) Puts($"Water stacks to {water.stackable}");
         }
 
         private void Unload()

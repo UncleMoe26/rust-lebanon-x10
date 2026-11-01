@@ -55,7 +55,7 @@ These are the gameplay plugins written for this server (Oxide / uMod, C#). They 
 | [FastSmelt](plugins/FastSmelt.cs) | Shortens ore cook times using Rust's own furnace logic, so it adds no load |
 | [FastRecycler](plugins/FastRecycler.cs) | Recyclers process an item every second instead of every 5 |
 | [LootBoost](plugins/LootBoost.cs) | Removes junk from barrels and crates, triples scrap and adds useful loot |
-| [StackSizes](plugins/StackSizes.cs) | Resources stack to 5000, weapons to 1, everything else that stacks x20 |
+| [StackSizes](plugins/StackSizes.cs) | Resources stack to at least 5000 (never below vanilla, so water tanks still fill), weapons to 1, everything else that stacks x20 |
 | [AutoGrade](plugins/AutoGrade.cs) | `/grade wood\|stone\|metal\|hqm\|off`: new building blocks are placed at that grade, paid from the player's inventory |
 | [MonumentPower](plugins/MonumentPower.cs) | Keeps monument lights on and fuse boxes filled |
 | [HourlyStorm](plugins/HourlyStorm.cs) | Starts a storm every hour and clears it after 10 minutes |
