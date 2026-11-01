@@ -25,6 +25,7 @@ In game, open the **Modded** tab and search for **Sandstorm**, or press **F1** a
 - `/backpack`, `/remove`, `/grade hqm` auto-upgrade, furnace splitter, quick sort
 - 3500 map with scientists, heavy scientists, animals and the Bradley tank at Launch Site
 - A storm rolls in every hour
+- Short nights: the night is still there, but it's over in 8 minutes
 - Monument lights stay on and puzzles need no fuses
 - Active admin
 
@@ -58,6 +59,8 @@ These are the gameplay plugins written for this server (Oxide / uMod, C#). They 
 | [AutoGrade](plugins/AutoGrade.cs) | `/grade wood\|stone\|metal\|hqm\|off`: new building blocks are placed at that grade, paid from the player's inventory |
 | [MonumentPower](plugins/MonumentPower.cs) | Keeps monument lights on and fuse boxes filled |
 | [HourlyStorm](plugins/HourlyStorm.cs) | Starts a storm every hour and clears it after 10 minutes |
+| [ShortNights](plugins/ShortNights.cs) | Keeps the night but speeds it up (8 real minutes by default); the day keeps its normal length |
+| [UnbreakableKit](plugins/UnbreakableKit.cs) | Gear from the chosen kits (default: `admin`) never loses condition while the owner has that kit's permission. Reads the item list from the Kits plugin's data |
 | [NoNPC](plugins/NoNPC.cs) | Removes hostile NPCs and wild animals; keeps safe-zone guards, shopkeepers, turrets and horses (not active on the server right now) |
 | [MapCheck](plugins/MapCheck.cs) | Records which monuments the map has, so the wipe script can re-roll maps without a Launch Site |
 | [TunnelDwellerCap](plugins/TunnelDwellerCap.cs) | Caps tunnel dweller NPCs to save server CPU |
