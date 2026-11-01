@@ -23,7 +23,7 @@ namespace Oxide.Plugins
             [JsonProperty("Discord invite link shown in the posts (optional)")]
             public string InviteUrl = "";
             [JsonProperty("Website")]
-            public string WebsiteUrl = "https://unclemoe26.github.io/rust-lebanon-x10/";
+            public string WebsiteUrl = "https://unclemoe26.github.io/sandstorm-x10/";
         }
 
         class StoredData
@@ -91,7 +91,7 @@ namespace Oxide.Plugins
             int online = BasePlayer.activePlayerList.Count;
             int reached = Milestones.Where(m => online >= m).DefaultIfEmpty(0).Max();
             if (reached > 0)
-                Once($"players:{reached}:{day}", $"🔥 {online} PLAYERS ONLINE", $"Rust Lebanon x10 is busy right now with **{online}/{ConVar.Server.maxplayers}** players. Jump in!");
+                Once($"players:{reached}:{day}", $"🔥 {online} PLAYERS ONLINE", $"SANDSTORM x10 is busy right now with **{online}/{ConVar.Server.maxplayers}** players. Jump in!");
         }
 
         void Once(string key, string title, string text)
@@ -106,11 +106,11 @@ namespace Oxide.Plugins
 
         void Post(string title, string text)
         {
-            string links = $"**Join:** `{Connect}` (Modded tab, search \"Lebanon\")\n**Website:** {config.WebsiteUrl}" +
+            string links = $"**Join:** `{Connect}` (Modded tab, search \"Sandstorm\")\n**Website:** {config.WebsiteUrl}" +
                            (string.IsNullOrEmpty(config.InviteUrl) ? "" : $"\n**Discord:** {config.InviteUrl}");
             var payload = new
             {
-                username = "Rust Lebanon x10",
+                username = "SANDSTORM x10",
                 avatar_url = config.WebsiteUrl + "logo.png",
                 embeds = new[]
                 {
@@ -136,7 +136,7 @@ namespace Oxide.Plugins
         {
             if (arg.Connection != null) return;
             if (!Ready) { Puts("Webhook not set"); return; }
-            Post("✅ Rust Lebanon x10 is connected", "Wipe countdowns, 'just wiped' and player milestones will be posted here automatically.");
+            Post("✅ SANDSTORM x10 is connected", "Wipe countdowns, 'just wiped' and player milestones will be posted here automatically.");
             Puts("Test message sent");
         }
     }

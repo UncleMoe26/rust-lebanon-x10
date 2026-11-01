@@ -1,4 +1,4 @@
-# Rust Lebanon x10
+# SANDSTORM x10
 
 **EU modded Rust server · 100 slots · weekly wipe every Thursday 20:00 CET (21:00 Lebanon time)**
 
@@ -6,9 +6,9 @@
 client.connect 2.59.169.7:28015
 ```
 
-In game, open the **Modded** tab and search for **Lebanon**, or press **F1** and paste the line above.
+In game, open the **Modded** tab and search for **Sandstorm**, or press **F1** and paste the line above.
 
-**Website:** [unclemoe26.github.io/rust-lebanon-x10](https://unclemoe26.github.io/rust-lebanon-x10/), with a one-click Join button and a countdown to the next wipe.
+**Website:** [unclemoe26.github.io/sandstorm-x10](https://unclemoe26.github.io/sandstorm-x10/), with a one-click Join button and a countdown to the next wipe.
 
 ## Free loot
 

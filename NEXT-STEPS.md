@@ -7,14 +7,14 @@ Status on 1 November 2026, and what's left to set up before the wipe on **Thursd
 - Server live: EU, 100 slots, 3500 map with Launch Site and the Bradley, weekly wipe every Thursday
 - Free loot in game: `/wipekit` after every wipe, `/invite` rewards for both players, `/kit`
 - Server name changes by itself: `WIPE TONIGHT 21:00 LB` on Thursdays, `JUST WIPED` for a day after
-- Website with a one-click Join button and a wipe countdown: https://unclemoe26.github.io/rust-lebanon-x10/ (also the in-game Website button)
+- Website with a one-click Join button and a wipe countdown: https://unclemoe26.github.io/sandstorm-x10/ (also the in-game Website button)
 - Plugins for vote rewards (`VoteRewards`) and Discord announcements (`DiscordAnnounce`) installed, waiting for their links
 - Reddit post for r/playrustservers prepared
 
 ## To do
 
 ### 1. Discord
-- [ ] Create the server **Rust Lebanon x10** with the channels `announcements`, `wipe-info`, `rules`, `general`, `looking-for-team`, `support`
+- [ ] Create the server **SANDSTORM x10** with the channels `announcements`, `wipe-info`, `rules`, `general`, `looking-for-team`, `support`
 - [ ] Invite link set to never expire
 - [ ] Webhook for `#announcements` (Edit Channel > Integrations > Webhooks > New Webhook > Copy Webhook URL)
 - [ ] Put the webhook into `DiscordAnnounce`, send a test post, add a Discord button to the website and welcome popup

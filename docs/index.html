@@ -3,24 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rust Lebanon x10 | EU modded Rust server, weekly wipe Thursday</title>
-<meta name="description" content="Rust Lebanon x10: EU modded Rust server with a fresh map every Thursday 20:00 CET / 21:00 Lebanon. Free wipe kit, invite rewards, kits, teleport, fast craft, 100 slots.">
+<title>SANDSTORM x10 | EU modded Rust server, weekly wipe Thursday</title>
+<meta name="description" content="SANDSTORM x10: EU modded Rust server with a fresh map every Thursday 20:00 CET / 21:00 Lebanon. Free wipe kit, invite rewards, kits, teleport, fast craft, 100 slots.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://unclemoe26.github.io/rust-lebanon-x10/">
-<meta property="og:title" content="Rust Lebanon x10 | Weekly wipe every Thursday">
+<meta property="og:url" content="https://unclemoe26.github.io/sandstorm-x10/">
+<meta property="og:title" content="SANDSTORM x10 | Weekly wipe every Thursday">
 <meta property="og:description" content="x10 gather, free wipe kit, invite rewards, kits, teleport, fast craft. EU, 100 slots. client.connect 2.59.169.7:28015">
-<meta property="og:image" content="https://unclemoe26.github.io/rust-lebanon-x10/header.png">
+<meta property="og:image" content="https://unclemoe26.github.io/sandstorm-x10/header.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
 <style>
-/* Same look as the server logo: charcoal, the orange LEBANON gradient, the blue lightning bolt */
+/* Same look as the server logo: storm-dark sky, the sand-to-orange SANDSTORM gradient, the amber lightning bolt */
 :root {
-  --bg: #121418; --panel: #1b1e24; --panel2: #22262e; --line: #2f343d;
-  --ink: #eceef1; --muted: #a2a8b3;
-  --orange: #ec7a2e; --orange2: #d24e1d; --blue: #6db8ff;
+  --bg: #141110; --panel: #1e1a17; --panel2: #27211c; --line: #3a3029;
+  --ink: #f1ece6; --muted: #b0a597;
+  --orange: #ffc779; --orange2: #e2701e; --blue: #ffd27a;
   --display: "Oswald", "Arial Narrow", sans-serif; --body: "Inter", "Segoe UI", system-ui, sans-serif; --mono: "JetBrains Mono", Consolas, monospace;
   color-scheme: dark;
 }
@@ -35,7 +35,7 @@ h2::before { content: ""; width: 6px; height: 26px; border-radius: 2px; backgrou
 p { margin: 0; }
 section { display: grid; gap: 20px; }
 
-.hero { position: relative; overflow: hidden; background: radial-gradient(ellipse at 50% 120%, #4a1c10 0%, transparent 60%), linear-gradient(#16191f, var(--bg)); border-bottom: 1px solid var(--line); }
+.hero { position: relative; overflow: hidden; background: radial-gradient(ellipse at 50% 120%, #4a1c10 0%, transparent 60%), linear-gradient(#1a1512, var(--bg)); border-bottom: 1px solid var(--line); }
 .hero-in { max-width: 1040px; margin: 0 auto; padding: 56px 20px 48px; display: grid; grid-template-columns: 200px 1fr; gap: 36px; align-items: center; }
 .hero img { width: 200px; height: 200px; border-radius: 22px; box-shadow: 0 10px 40px rgba(0,0,0,.5); }
 .hero h1 { font-size: clamp(40px, 7vw, 72px); line-height: .95; }
@@ -43,7 +43,7 @@ section { display: grid; gap: 20px; }
 .tagline { color: var(--muted); font-size: 18px; margin-top: 12px; max-width: 56ch; }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
 .btn { display: inline-flex; align-items: center; gap: 10px; font: 700 17px/1 var(--display); letter-spacing: .06em; text-transform: uppercase; text-decoration: none; border-radius: 6px; padding: 15px 22px; border: 0; cursor: pointer; }
-.btn.primary { background: linear-gradient(var(--orange), var(--orange2)); color: #fff; box-shadow: 0 6px 20px rgba(236,122,46,.25); }
+.btn.primary { background: linear-gradient(#f4a24a, var(--orange2)); color: #fff; box-shadow: 0 6px 20px rgba(236,122,46,.25); }
 .btn.ghost { background: var(--panel2); color: var(--ink); border: 1px solid var(--line); }
 .btn:hover { filter: brightness(1.08); }
 .btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
@@ -78,7 +78,7 @@ table { width: 100%; border-collapse: collapse; }
 td { padding: 11px 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
 tr:last-child td { border-bottom: 0; }
 td:first-child { font-family: var(--mono); color: var(--orange); white-space: nowrap; width: 1%; }
-tr:nth-child(even) td { background: #171a20; }
+tr:nth-child(even) td { background: #1a1613; }
 
 .rules { margin: 0; padding-left: 22px; display: grid; gap: 6px; }
 footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
@@ -92,9 +92,9 @@ footer div { max-width: 1040px; margin: 0 auto; padding: 24px 20px; display: fle
 
 <header class="hero">
   <div class="hero-in">
-    <img src="logo.png" alt="Rust Lebanon logo" width="200" height="200">
+    <img src="logo.png" alt="SANDSTORM x10 logo" width="200" height="200">
     <div>
-      <h1>Rust <span>Lebanon</span> x10</h1>
+      <h1><span>Sandstorm</span> x10</h1>
       <p class="tagline">EU modded Rust server with a fresh map every Thursday. x10 gather, free kits, teleport, fast craft, and free loot when you join on wipe day.</p>
       <div class="actions">
         <a class="btn primary" href="steam://connect/2.59.169.7:28015">&#9889; Join the server</a>
@@ -145,7 +145,7 @@ footer div { max-width: 1040px; margin: 0 auto; padding: 24px 20px; display: fle
     <h2>How to join</h2>
     <ol class="join">
       <li><h3>One click</h3><p>Press <b>Join the server</b> at the top of this page. Steam starts Rust and connects you.</p></li>
-      <li><h3>Server browser</h3><p>Open Rust, press <b>Play Game</b>, go to the <b>Modded</b> tab and search <b>Lebanon</b>.</p></li>
+      <li><h3>Server browser</h3><p>Open Rust, press <b>Play Game</b>, go to the <b>Modded</b> tab and search <b>Sandstorm</b>.</p></li>
       <li><h3>Console</h3><p>In Rust press <b>F1</b> and paste <code>client.connect 2.59.169.7:28015</code>, then press Enter.</p></li>
     </ol>
   </section>
@@ -187,8 +187,8 @@ footer div { max-width: 1040px; margin: 0 auto; padding: 24px 20px; display: fle
 </main>
 
 <footer><div>
-  <span>Rust Lebanon x10 · <code>client.connect 2.59.169.7:28015</code></span>
-  <span>The server's plugins are open source on <a href="https://github.com/UncleMoe26/rust-lebanon-x10">GitHub</a></span>
+  <span>SANDSTORM x10 · <code>client.connect 2.59.169.7:28015</code></span>
+  <span>The server's plugins are open source on <a href="https://github.com/UncleMoe26/sandstorm-x10">GitHub</a></span>
 </div></footer>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
