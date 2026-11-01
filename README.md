@@ -19,7 +19,8 @@ In game, open the **Modded** tab and search for **Sandstorm**, or press **F1** a
 ## What's on the server
 
 - x10 gather, crafting capped at 3 seconds, fast smelting and recycling
-- Barrels and crates hold useful loot with 3x scrap, and stacks are x20
+- Water flows through pipes 10x faster
+- Barrels and crates hold useful loot with 3x scrap, and stacks are x20 (resources up to 10,000)
 - Free kits with `/kit` (starter kit every 20 minutes)
 - Teleport: `/sethome`, `/home`, `/tpr` (accept with `/tpa`), `/outpost`, `/bandit`
 - `/backpack`, `/remove`, `/grade hqm` auto-upgrade, furnace splitter, quick sort
@@ -54,8 +55,9 @@ These are the gameplay plugins written for this server (Oxide / uMod, C#). They 
 | [FastCrafting](plugins/FastCrafting.cs) | Caps crafting time at 3 seconds for every item |
 | [FastSmelt](plugins/FastSmelt.cs) | Shortens ore cook times using Rust's own furnace logic, so it adds no load |
 | [FastRecycler](plugins/FastRecycler.cs) | Recyclers process an item every second instead of every 5 |
+| [FastWater](plugins/FastWater.cs) | Water moves through pipes 10x faster from player-built catchers, barrels, pumps and purifiers; monument water stays vanilla |
 | [LootBoost](plugins/LootBoost.cs) | Removes junk from barrels and crates, triples scrap and adds useful loot |
-| [StackSizes](plugins/StackSizes.cs) | Resources stack to at least 5000 (never below vanilla, so water tanks still fill), weapons to 1, everything else that stacks x20 |
+| [StackSizes](plugins/StackSizes.cs) | Resources stack to at least 10,000 (never below vanilla, so water tanks still fill), weapons to 1, everything else that stacks x20 |
 | [AutoGrade](plugins/AutoGrade.cs) | `/grade wood\|stone\|metal\|hqm\|off`: new building blocks are placed at that grade, paid from the player's inventory |
 | [MonumentPower](plugins/MonumentPower.cs) | Keeps monument lights on and fuse boxes filled |
 | [HourlyStorm](plugins/HourlyStorm.cs) | Starts a storm every hour and clears it after 10 minutes |
