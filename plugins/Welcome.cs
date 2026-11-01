@@ -32,14 +32,15 @@ namespace Oxide.Plugins
             "<color=#9fd0ff>/invite</color>  your invite code: when a friend plays 30 min you BOTH get free loot\n" +
             "<color=#9fd0ff>/wipekit</color>  free starter pack in the first 2 hours after every wipe\n\n" +
             "<color=#e0b030>RULES</color>\n" +
-            "No cheating, no exploiting, no racism. Have fun!";
+            "No cheating, no exploiting, no racism. Have fun!\n\n" +
+            "<color=#e0b030>DISCORD</color>  <color=#9fd0ff>discord.gg/5GhkemXHP</color>  wipe alerts, find a team, report cheaters";
 
         // Seconds between online count announcements
         const float OnlineInterval = 600f;
         // Seconds between kit reminders (first one is offset so it doesn't land on the online count)
         const float KitInterval = 900f;
-        // The owner doesn't get the popup on join (set to your SteamID64)
-        const ulong OwnerId = 0;
+        // The owner doesn't get the popup on join
+        const ulong OwnerId = 76561198866280489;
         const string PopupName = "WelcomePopup";
         // Popup closes by itself after this long
         const float PopupSeconds = 60f;
