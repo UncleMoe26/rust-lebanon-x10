@@ -26,4 +26,10 @@ Status on 3 November 2026, and what's left to set up before the wipe on **Thursd
 The server key and the webhook URL stay private: they go into the server config only, never into this repo or a public post.
 
 ### 3. Facebook
-- [ ] Log in to Facebook in Chrome, then find Rust gaming groups and post the ad images (each post approved first)
+Page "Sandstorm x10": https://www.facebook.com/profile.php?id=61596255626262 (cover `docs/ads/fb-cover-1640x624.png`, first ad posted)
+
+- [x] Rust Game Community + Servers: ad posted, waiting for admin approval (one ad a day allowed)
+- [ ] RUST Global Gaming Community: Pages can't post there, post as your personal profile
+- [ ] Rust Gaming Community Pc&Console: post the ad
+- [ ] RUST PC SERVER COMMUNITY: ads only after 30 days of membership, so the first one around 3 December, then once a week. Like and comment there now and then so the Page doesn't get removed
+- [ ] Thursday: "wipe tonight" post at 19:00 and "just wiped" at 21:05 (texts in `rust-tools/marketing/wipe-night-posts.txt`)
