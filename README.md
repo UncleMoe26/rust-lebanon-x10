@@ -19,6 +19,8 @@ In game, open the **Modded** tab and search for **Sandstorm**, or press **F1** a
 ## What's on the server
 
 - x10 gather, crafting capped at 3 seconds, fast smelting and recycling
+- **No BPs**: every blueprint is unlocked from the start
+- `/mymini`: your own fuelled minicopter (`/nomini` puts it away)
 - Water flows through pipes 10x faster
 - Barrels and crates hold useful loot with 3x scrap, and stacks are x20 (resources up to 10,000)
 - Free kits with `/kit` (starter kit every 20 minutes)
@@ -35,7 +37,7 @@ In game, open the **Modded** tab and search for **Sandstorm**, or press **F1** a
 | | |
 |---|---|
 | Map wipe | Every Thursday, 20:00 CET / 21:00 Lebanon time |
-| Blueprints | Kept between map wipes |
+| Blueprints | Not needed: every blueprint is unlocked (No BPs) |
 | Facepunch forced wipe | First Thursday of the month (same time) |
 
 The server name shows the last wipe date, for example `Wiped 30/10`. On Thursdays before the wipe it reads `WIPE TONIGHT 21:00 LB`, and for 24 hours after a wipe `JUST WIPED`.
@@ -69,6 +71,8 @@ These are the gameplay plugins written for this server (Oxide / uMod, C#). They 
 | [MemoryRestart](plugins/MemoryRestart.cs) | Daily restart, and a restart when memory use gets too high, with a chat countdown |
 | [Welcome](plugins/Welcome.cs) | Welcome popup and chat message on join, kit reminders, online count. Set `OwnerId` to your SteamID64 to skip the popup for yourself |
 | [InviteRewards](plugins/InviteRewards.cs) | `/invite` codes: a new player who enters a friend's code and plays 30 minutes earns a reward for both. Veterans can't use codes, and each player can earn from up to 20 friends |
+| [NoBlueprints](plugins/NoBlueprints.cs) | Every player knows every blueprint from the start ("No BPs") |
+| [MyMini](plugins/MyMini.cs) | `/mymini` spawns your own minicopter with 200 low grade, one per player, 10 minute cooldown; `/nomini` removes it |
 | [WipeEvent](plugins/WipeEvent.cs) | Changes the server name to `WIPE TONIGHT` / `JUST WIPED` around the wipe, and gives `/wipekit` once per player in the first 2 hours |
 | [VoteRewards](plugins/VoteRewards.cs) | `/vote` and `/claimvote` for [rust-servers.net](https://rust-servers.net) votes. Put your server key and vote link in `oxide/config/VoteRewards.json` |
 | [DiscordAnnounce](plugins/DiscordAnnounce.cs) | Posts "wipe tonight", "wipe in 2 hours / 15 minutes", "just wiped" and player-count milestones to a Discord channel. Put a webhook URL in `oxide/config/DiscordAnnounce.json` |
