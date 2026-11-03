@@ -5,14 +5,14 @@ using UnityEngine;
 
 namespace Oxide.Plugins
 {
-    [Info("Welcome", "Uncle Moe", "1.6.0")]
+    [Info("Welcome", "Uncle Moe", "1.8.0")]
     [Description("Greets players, shows a welcome popup, reminds about kits and posts the online count")]
     class Welcome : RustPlugin
     {
         const string Message =
-            "<color=#e0b030>Welcome to SANDSTORM x10!</color> x10 gather, no BPs, fast craft, fast smelt, boosted loot. <color=#ffcc00>Wipe every Thursday 21:00 Lebanon time.</color>\n" +
-            "<color=#9fd0ff>/kit</color> starter kit  <color=#9fd0ff>/sethome</color> <color=#9fd0ff>/home</color> <color=#9fd0ff>/tpr</color> teleport  <color=#9fd0ff>/backpack</color>  <color=#9fd0ff>/mymini</color>  <color=#9fd0ff>/remove</color>  <color=#9fd0ff>/grade hqm</color>\n" +
-            "Storm every hour. Bring your friends with <color=#9fd0ff>/invite</color> and you both get free loot!";
+            "<color=#e0b030>Welcome to SANDSTORM x10!</color> x10 gather, no BPs, fast craft, fast smelt, boosted loot. <color=#ffcc00>Wipes every Monday and Thursday 21:00 Lebanon time.</color>\n" +
+            "<color=#9fd0ff>/shop</color>  <color=#9fd0ff>/skin</color>  <color=#9fd0ff>/kit</color> starter kit  <color=#9fd0ff>/sethome</color> <color=#9fd0ff>/home</color> <color=#9fd0ff>/tpr</color> teleport  <color=#9fd0ff>/backpack</color>  <color=#9fd0ff>/mymini</color>  <color=#9fd0ff>/remove</color>  <color=#9fd0ff>/grade hqm</color>\n" +
+            "Locked crate or airdrop event every hour. Bring your friends with <color=#9fd0ff>/invite</color> and you both get free loot!";
 
         const string KitReminder =
             "<color=#ffcc00>FREE KITS!</color> Type <color=#9fd0ff>/kit</color> to open the kit menu. The starter kit can be claimed every 20 minutes.";
@@ -20,15 +20,15 @@ namespace Oxide.Plugins
         const string PopupText =
             "<color=#e0b030>SERVER</color>\n" +
             "x10 gather  •  <color=#ffcc00>No BPs: every blueprint unlocked</color>  •  fast craft (3s max)  •  fast smelt and recycle  •  boosted loot\n" +
-            "Scientists, heavy scientists, animals and the Bradley tank at Launch Site  •  storm every hour\n" +
-            "<color=#ffcc00>Weekly wipe: every Thursday 21:00 Lebanon time</color>\n\n" +
+            "Scientists, heavies, animals and the Bradley at Launch Site  •  <color=#ffcc00>loot events every hour</color> (locked crates, airdrops)\n" +
+            "<color=#ffcc00>Wipes: every Monday and Thursday 21:00 Lebanon time</color>  •  max 6 per team\n\n" +
             "<color=#e0b030>COMMANDS</color>\n" +
             "<color=#9fd0ff>/kit</color>  free kits (starter kit every 20 minutes)\n" +
             "<color=#9fd0ff>/sethome name</color>  then  <color=#9fd0ff>/home name</color>  teleport home (3 homes)\n" +
             "<color=#9fd0ff>/tpr player</color>  teleport to a friend (they accept with <color=#9fd0ff>/tpa</color>)\n" +
             "<color=#9fd0ff>/outpost</color>  <color=#9fd0ff>/bandit</color>  teleport to the safe zones    <color=#9fd0ff>/mymini</color>  your own minicopter\n" +
             "<color=#9fd0ff>/backpack</color>  extra storage    <color=#9fd0ff>/remove</color>  remove your own building parts\n" +
-            "<color=#9fd0ff>/grade hqm</color>  auto upgrade while you build\n" +
+            "<color=#9fd0ff>/shop</color>  buy guns, armor and resources with scrap    <color=#9fd0ff>/skin</color>  free skins    <color=#9fd0ff>/grade hqm</color>  auto upgrade\n" +
             "<color=#9fd0ff>/invite</color>  your invite code: when a friend plays 30 min you BOTH get free loot\n" +
             "<color=#9fd0ff>/wipekit</color>  free starter pack in the first 2 hours after every wipe\n\n" +
             "<color=#e0b030>RULES</color>\n" +

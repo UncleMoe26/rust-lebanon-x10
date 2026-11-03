@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SANDSTORM x10 | EU modded Rust server, weekly wipe Thursday</title>
-<meta name="description" content="SANDSTORM x10: EU modded Rust server with a fresh map every Thursday 20:00 CET / 21:00 Lebanon. No BPs, free wipe kit, invite rewards, kits, teleport, /mymini, fast craft, 100 slots.">
+<title>SANDSTORM 10x | EU modded Rust server, wipes Monday and Thursday</title>
+<meta name="description" content="SANDSTORM x10: EU modded Rust server with a fresh map every Monday and Thursday 20:00 CET / 21:00 Lebanon. No BPs, /shop, hourly events, free skins, kits, teleport, /mymini, max 6 per team, 100 slots.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://unclemoe26.github.io/sandstorm-x10/">
-<meta property="og:title" content="SANDSTORM x10 | Weekly wipe every Thursday">
-<meta property="og:description" content="x10 gather, no BPs, free wipe kit, invite rewards, kits, teleport, fast craft. EU, 100 slots. client.connect 2.59.169.7:28015">
+<meta property="og:title" content="SANDSTORM 10x | Wipes every Monday and Thursday">
+<meta property="og:description" content="x10 gather, no BPs, /shop, hourly events, free skins, free wipe kit, kits, teleport, max 6. EU, 100 slots. client.connect 2.59.169.7:28015">
 <meta property="og:image" content="https://unclemoe26.github.io/sandstorm-x10/header.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="logo.png">
@@ -95,7 +95,7 @@ footer div { max-width: 1040px; margin: 0 auto; padding: 24px 20px; display: fle
     <img src="logo.png" alt="SANDSTORM x10 logo" width="200" height="200">
     <div>
       <h1><span>Sandstorm</span> x10</h1>
-      <p class="tagline">EU modded Rust server with a fresh map every Thursday. x10 gather, no BPs, free kits, teleport, /mymini, fast craft, and free loot when you join on wipe day.</p>
+      <p class="tagline">EU modded Rust server with a fresh map every Monday and Thursday. x10 gather, no BPs, a scrap shop, hourly loot events, free skins, kits, teleport and /mymini. Max 6 per team.</p>
       <div class="actions">
         <a class="btn primary" href="steam://connect/2.59.169.7:28015">&#9889; Join the server</a>
         <button class="btn ghost" type="button" id="copy">Copy connect command</button>
@@ -109,9 +109,9 @@ footer div { max-width: 1040px; margin: 0 auto; padding: 24px 20px; display: fle
 <main>
 
   <div class="facts" aria-label="Server facts">
-    <div class="fact wipe"><b id="wipe-label">Next wipe</b><span id="countdown">Thursday</span><small id="wipe-when">20:00 CET / 21:00 Lebanon</small></div>
+    <div class="fact wipe"><b id="wipe-label">Next wipe</b><span id="countdown">Mon &amp; Thu</span><small id="wipe-when">20:00 CET / 21:00 Lebanon</small></div>
     <div class="fact"><b>Map</b><span>3500</span><small>Launch Site + Bradley every wipe</small></div>
-    <div class="fact"><b>Slots</b><span>100</span><small>EU, Modded tab</small></div>
+    <div class="fact"><b>Slots</b><span>100</span><small>EU, Modded tab, max 6 per team</small></div>
     <div class="fact"><b>Server</b><span>Netherlands</span><small>about 63 ms from Lebanon</small></div>
   </div>
 
@@ -130,6 +130,10 @@ footer div { max-width: 1040px; margin: 0 auto; padding: 24px 20px; display: fle
       <li>x10 gather on every node, tree and pickup</li>
       <li><b>No BPs:</b> every blueprint is unlocked from the start, no research</li>
       <li><b>/mymini:</b> your own fuelled minicopter whenever you want</li>
+      <li><b>/shop:</b> buy guns, armor, ammo, resources and raid gear with scrap</li>
+      <li><b>Events every hour:</b> a locked crate at a monument or a supply drop, marked on the map</li>
+      <li><b>/skin:</b> free skins for your weapons, tools and doors</li>
+      <li><b>Max 6 per team</b>, so small groups get a fair fight</li>
       <li>Crafting capped at 3 seconds, fast smelting and recycling</li>
       <li>Boosted loot with 3x scrap, stacks x20, resources up to 10k</li>
       <li>Teleport home, to friends, to Outpost and Bandit Camp</li>
@@ -156,6 +160,8 @@ footer div { max-width: 1040px; margin: 0 auto; padding: 24px 20px; display: fle
   <section>
     <h2>Commands</h2>
     <div class="table"><table>
+      <tr><td>/shop</td><td>Buy guns, armor, ammo, resources and raid gear with scrap</td></tr>
+      <tr><td>/skin</td><td>Hold an item and pick any approved skin for it, free</td></tr>
       <tr><td>/kit</td><td>Open the kit menu. Starter kit every 20 minutes</td></tr>
       <tr><td>/wipekit</td><td>Free starter pack in the first 2 hours of a wipe</td></tr>
       <tr><td>/invite</td><td>Your invite code. <b>/invite top</b> shows the best recruiters</td></tr>
@@ -173,8 +179,8 @@ footer div { max-width: 1040px; margin: 0 auto; padding: 24px 20px; display: fle
   <section>
     <h2>Wipe schedule</h2>
     <div class="table"><table>
-      <tr><td>Map wipe</td><td>Every Thursday, 20:00 CET / 21:00 Lebanon time</td></tr>
-      <tr><td>Blueprints</td><td>Kept between map wipes</td></tr>
+      <tr><td>Map wipe</td><td>Every Monday and Thursday, 20:00 CET / 21:00 Lebanon time</td></tr>
+      <tr><td>Blueprints</td><td>Not needed: every blueprint is unlocked (No BPs)</td></tr>
       <tr><td>Forced wipe</td><td>Facepunch's monthly update, first Thursday of the month, same time</td></tr>
     </table></div>
   </section>
@@ -206,7 +212,7 @@ document.getElementById('copy').addEventListener('click', function () {
   else say(cmd);
 });
 
-// Wipe countdown: every Thursday 20:00 Amsterdam time (21:00 Lebanon)
+// Wipe countdown: every Monday and Thursday 20:00 Amsterdam time (21:00 Lebanon)
 var zone = 'Europe/Amsterdam';
 function partsIn(date) {
   var p = {};
@@ -228,7 +234,7 @@ function wipes(now) {
   var t = partsIn(new Date(now)), last = null, next = null;
   for (var k = -7; k <= 8; k++) {
     var day = new Date(Date.UTC(t.year, t.month - 1, t.day + k));
-    if (day.getUTCDay() !== 4) continue;
+    if (day.getUTCDay() !== 1 && day.getUTCDay() !== 4) continue;
     var at = amsterdam20(day.getUTCFullYear(), day.getUTCMonth() + 1, day.getUTCDate());
     if (at <= now) last = at; else if (next === null) next = at;
   }
@@ -251,7 +257,8 @@ function tick() {
     out.textContent = (d ? d + 'd ' : '') + h + 'h ' + m + 'm';
   }
   var local = new Date(w.next).toLocaleString([], { weekday: 'short', hour: '2-digit', minute: '2-digit' });
-  when.textContent = 'Thursday 20:00 CET / 21:00 Lebanon (' + local + ' your time)';
+  var dayName = new Date(w.next).toLocaleString('en-GB', { timeZone: zone, weekday: 'long' });
+  when.textContent = dayName + ' 20:00 CET / 21:00 Lebanon (' + local + ' your time)';
 }
 tick();
 setInterval(tick, 30000);

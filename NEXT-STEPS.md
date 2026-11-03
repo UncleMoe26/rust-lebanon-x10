@@ -1,12 +1,13 @@
 # Next steps
 
-Status on 3 November 2026, and what's left to set up before the wipe on **Thursday 5 November, 21:00 Lebanon / 20:00 CET**.
+Status on 3 November 2026, and what's left to set up before the wipe on **Thursday 5 November, 21:00 Lebanon / 20:00 CET**. From then on the map wipes every **Monday and Thursday** at the same time.
 
 ## Done
 
-- Server live: EU, 100 slots, 3500 map with Launch Site and the Bradley, weekly wipe every Thursday
+- Server live: EU, 100 slots, 3500 map with Launch Site and the Bradley, wipes every Monday and Thursday, max 6 per team
+- Matched to the busiest 10x servers: No BPs, `/shop` (scrap), hourly events (locked crates and supply drops), `/skin` free skins, `/mymini`
 - Free loot in game: `/wipekit` after every wipe, `/invite` rewards for both players, `/kit`
-- Server name changes by itself: `WIPE TONIGHT 21:00 LB` on Thursdays, `JUST WIPED` for a day after
+- Server name changes by itself: `WIPE TONIGHT 21:00 LB` on wipe days, `JUST WIPED` for a day after
 - Website with a one-click Join button and a wipe countdown: https://unclemoe26.github.io/sandstorm-x10/ (also the in-game Website button)
 - Plugins for vote rewards (`VoteRewards`) and Discord announcements (`DiscordAnnounce`) installed, waiting for their links
 - Reddit post for r/playrustservers prepared
@@ -15,12 +16,18 @@ Status on 3 November 2026, and what's left to set up before the wipe on **Thursd
 
 ## To do
 
+### 0. Listings
+- [ ] rust-servers.net: update the title to `[EU] SANDSTORM 10x | Wipes Mon & Thu | No BPs | Shop | Kits | Max 6` and the description
+- [ ] BattleMetrics: claim the server (free), add the Discord and the description
+- [ ] Also list on just-wiped.net, rust-servers.info and top-games (each needs an account you make yourself)
+- [ ] Friends and Discord members `/vote` every day
+
 ### 1. Reddit
 - [ ] Post on r/playrustservers (one ad every 3 days; you post it yourself, the browser extension can't open Reddit)
 - [ ] Next post on Thursday 5 November around 19:00 Lebanon, before the wipe
 
 ### 2. Wipe night
-- [ ] Friends online at 21:00 Lebanon on Thursday so the server shows players in the browser
+- [ ] 10-15 friends online at 21:00 Lebanon on Thursday so the server shows players in the browser (a Discord giveaway helps)
 - [ ] "Wipe tonight" post at 19:00 and "wipe is live" post at 21:05 (WhatsApp, Discord, Facebook)
 
 The server key and the webhook URL stay private: they go into the server config only, never into this repo or a public post.

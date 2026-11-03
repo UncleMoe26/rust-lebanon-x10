@@ -6,11 +6,11 @@ using Oxide.Core;
 
 namespace Oxide.Plugins
 {
-    [Info("Discord Announce", "Uncle Moe", "1.0.0")]
+    [Info("Discord Announce", "Uncle Moe", "1.1.0")]
     [Description("Posts wipe countdowns, 'just wiped' and player-count milestones to a Discord channel through a webhook")]
     class DiscordAnnounce : RustPlugin
     {
-        // The weekly wipe (scheduler.sh): Thursday 20:00 Amsterdam = 21:00 Lebanon
+        // The wipes (scheduler.sh): Monday and Thursday 20:00 Amsterdam = 21:00 Lebanon
         const int WipeHour = 20;
         const string Connect = "client.connect 2.59.169.7:28015";
         static readonly int[] Milestones = { 5, 10, 20, 30, 50, 75, 100 };
@@ -77,7 +77,7 @@ namespace Oxide.Plugins
                     "Fresh map is live right now. Free **/wipekit** for the first 2 hours, so get in early!");
 
             // Wipe-day countdown
-            if (local.DayOfWeek == DayOfWeek.Thursday && hoursSinceWipe > 12)
+            if ((local.DayOfWeek == DayOfWeek.Monday || local.DayOfWeek == DayOfWeek.Thursday) && hoursSinceWipe > 12)
             {
                 if (local.Hour >= 12 && local.Hour < WipeHour - 2)
                     Once("today:" + day, "⏰ WIPE TONIGHT", "Fresh map tonight at **21:00 Lebanon / 20:00 CET**. Free **/wipekit** for the first 2 hours after the wipe.");

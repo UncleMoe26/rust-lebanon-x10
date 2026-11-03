@@ -5,11 +5,11 @@ using Oxide.Core;
 
 namespace Oxide.Plugins
 {
-    [Info("Wipe Event", "Uncle Moe", "1.0.0")]
-    [Description("Wipe night: the server name shows WIPE TONIGHT on Thursdays and JUST WIPED for a day after, and /wipekit gives a free starter pack in the first 2 hours of a wipe")]
+    [Info("Wipe Event", "Uncle Moe", "1.1.0")]
+    [Description("Wipe night: the server name shows WIPE TONIGHT on wipe days (Monday and Thursday) and JUST WIPED for a day after, and /wipekit gives a free starter pack in the first 2 hours of a wipe")]
     class WipeEvent : RustPlugin
     {
-        // The weekly wipe (scheduler.sh): Thursday 20:00 Amsterdam = 21:00 Lebanon
+        // The wipes (scheduler.sh): Monday and Thursday 20:00 Amsterdam = 21:00 Lebanon
         const int WipeHour = 20;
         const double WipeKitHours = 2;
         const double JustWipedHours = 24;
@@ -70,7 +70,7 @@ namespace Oxide.Plugins
             DateTime local = AmsterdamNow();
             if (HoursSinceWipe < JustWipedHours)
                 name = WipedPart.Replace(baseName, "JUST WIPED");
-            else if (local.DayOfWeek == DayOfWeek.Thursday && local.Hour < WipeHour)
+            else if ((local.DayOfWeek == DayOfWeek.Monday || local.DayOfWeek == DayOfWeek.Thursday) && local.Hour < WipeHour)
                 name = WipedPart.Replace(baseName, "WIPE TONIGHT 21:00 LB");
             if (ConVar.Server.hostname != name) ConVar.Server.hostname = name;
         }
@@ -93,7 +93,7 @@ namespace Oxide.Plugins
         {
             if (!WipeKitOpen)
             {
-                player.ChatMessage("The wipe kit is only available in the first 2 hours after a wipe. Next wipe: <color=#ffcc00>Thursday 21:00 Lebanon time</color>.");
+                player.ChatMessage("The wipe kit is only available in the first 2 hours after a wipe. Next wipe: <color=#ffcc00>Monday or Thursday 21:00 Lebanon time</color>, whichever comes first.");
                 return;
             }
             if (!data.Claimed.Add(player.userID))
