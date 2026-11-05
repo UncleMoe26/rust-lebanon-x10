@@ -4,7 +4,7 @@ Status on 3 November 2026, and what's left to set up before the wipe on **Thursd
 
 ## Done
 
-- Server live: EU, 100 slots, 3500 map with Launch Site and the Bradley, wipes every Monday and Thursday, max 6 per team
+- Server live: EU, 250 slots, 4500 map with Launch Site and the Bradley, wipes every Monday and Thursday, max 6 per team
 - Matched to the busiest 10x servers: No BPs, `/shop` (scrap), hourly events (locked crates and supply drops), `/skin` free skins, `/mymini`
 - Free loot in game: `/wipekit` after every wipe, `/invite` rewards for both players, `/kit`
 - Server name changes by itself: `WIPE TONIGHT 21:00 LB` on wipe days, `JUST WIPED` for a day after

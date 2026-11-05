@@ -1,6 +1,6 @@
 # SANDSTORM x10
 
-**EU modded Rust server · 100 slots · wipes every Monday and Thursday 20:00 CET (21:00 Lebanon time) · max 6 per team**
+**EU modded Rust server · 250 slots · wipes every Monday and Thursday 20:00 CET (21:00 Lebanon time) · max 6 per team**
 
 ```
 client.connect 2.59.169.7:28015
@@ -30,7 +30,7 @@ In game, open the **Modded** tab and search for **Sandstorm**, or press **F1** a
 - Free kits with `/kit` (starter kit every 20 minutes)
 - Teleport: `/sethome`, `/home`, `/tpr` (accept with `/tpa`), `/outpost`, `/bandit`
 - `/backpack`, `/remove`, `/grade hqm` auto-upgrade, furnace splitter, quick sort
-- 3500 map with scientists, heavy scientists, animals and the Bradley tank at Launch Site
+- 4500 map with scientists, heavy scientists, animals and the Bradley tank at Launch Site
 - A storm rolls in every hour
 - Short nights: the night is still there, but it's over in 8 minutes
 - Monument lights stay on and puzzles need no fuses
